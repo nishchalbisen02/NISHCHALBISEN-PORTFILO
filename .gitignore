@@ -1,0 +1,18 @@
+/node_modules
+/.next
+/out
+/build
+.DS_Store
+*.pem
+.env*
+/assets-raw
+npm-debug.log*
+
+# build / tooling caches
+*.tsbuildinfo
+next-env.d.ts
+
+# stray reference images dropped in the project root
+/WhatsApp Image *
+/*.jpeg
+/*.jpg
