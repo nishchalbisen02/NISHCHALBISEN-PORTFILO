@@ -15,8 +15,32 @@ const PKG = `${DESKTOP}/frimflix-website-package/assets`;
 const SUKH = `${DESKTOP}/SUKHMANI CONSTRUCTION BHOPAL/files/sukhmani-construction-site/sukhmani-construction-site/assets/images`;
 const URV = `${DESKTOP}/URVARAM WEBSITE`;
 
+const KOPAL = `${DESKTOP}/kopal RAW data`;
+const SMILE = `${DESKTOP}/THE SMILE DIARY`;
+const RADIORA = `${DESKTOP}/ECOMBUTY/design-assets/source`;
+const FLOWAI = `${DESKTOP}/FLOWAI/assets`;
+
 // [source, outRelPath, targetWidth, quality]
 const IMAGES = [
+  // ---- IBT professional work ----
+  [`${KOPAL}/Kopal Rendered Image 1.jpg.jpeg`, "work/kopal-cover.webp", 1600, 78],
+  [`${KOPAL}/Kopal Rendered Image 3.jpg.jpeg`, "work/kopal-01.webp", 1500, 78],
+  [`${KOPAL}/Kopal Rendered Image 6.jpg.jpeg`, "work/kopal-02.webp", 1500, 78],
+  [`${KOPAL}/Kopal Rendered Image 9.jpg.jpeg`, "work/kopal-03.webp", 1500, 78],
+  [`${KOPAL}/Kopal International School Logo.png`, "work/kopal-04.webp", 1200, 88],
+  [`${SMILE}/ChatGPT Image Jul 15, 2026, 01_59_46 AM.png`, "work/smilediary-cover.webp", 1500, 80],
+  [`${SMILE}/ChatGPT Image Jul 15, 2026, 02_00_08 AM.png`, "work/smilediary-01.webp", 1400, 80],
+  [`${SMILE}/ChatGPT Image Jul 15, 2026, 02_56_17 AM.png`, "work/smilediary-02.webp", 1400, 80],
+  [`${RADIORA}/Recreate_four_product_visual_cards_202608182357.jpeg`, "work/radiora-cover.webp", 1500, 80],
+  [`${RADIORA}/Recreate_three_skincare_products_202608182356.jpeg`, "work/radiora-01.webp", 1400, 80],
+  [`${RADIORA}/Recreate_ritual_visual_section_202608182357.jpeg`, "work/radiora-02.webp", 1400, 80],
+  [`${RADIORA}/Recreating_visual_assets_collage_202608182357.jpeg`, "work/radiora-03.webp", 1400, 80],
+  [`${FLOWAI}/og-image.png`, "work/flowai-cover.webp", 1600, 82],
+  [`${FLOWAI}/work/ai-commercial.jpg`, "work/flowai-01.webp", 1400, 80],
+  [`${FLOWAI}/work/ai-product-video.jpg`, "work/flowai-02.webp", 1400, 80],
+  [`${FLOWAI}/work/ai-social-ad.jpg`, "work/flowai-03.webp", 1400, 80],
+  [`${FLOWAI}/work/ai-ugc-video.jpg`, "work/flowai-04.webp", 1400, 80],
+
   // Posters / campaigns
   [`${FRIM}/Bhopal.jpg.jpeg`, "work/bhopal.webp", 1500, 80],
   [`${FRIM}/sikkim.png`, "work/sikkim.webp", 1500, 78],

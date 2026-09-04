@@ -1,52 +1,65 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { site } from "@/lib/site";
-import Intro from "@/components/Intro";
+import { profile } from "@/data/profile";
+import SmoothScroll from "@/components/layout/SmoothScroll";
+import Nav from "@/components/layout/Nav";
+import Footer from "@/components/layout/Footer";
+import Intro from "@/components/layout/Intro";
+
+const SITE_URL = "https://nishchalbisen.com"; // TODO: set real domain
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nishchalbisen.example"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: `${site.name} — ${site.role}`,
-    template: `%s — ${site.name}`,
+    default: `${profile.name} — Creative Technologist · Technology, AI, Design & Film`,
+    template: `%s — ${profile.name}`,
   },
-  description: site.tagline,
+  description: profile.statement,
   keywords: [
     "Nishchal Bisen",
-    "graphic designer",
+    "creative technologist",
+    "web designer",
+    "frontend developer",
+    "UI UX designer",
+    "AI",
     "brand identity",
-    "poster design",
-    "art director",
+    "motion graphics",
+    "film",
     "Bhopal",
     "India",
   ],
-  authors: [{ name: site.name }],
+  authors: [{ name: profile.name }],
+  creator: profile.name,
   openGraph: {
-    title: `${site.name} — ${site.role}`,
-    description: site.tagline,
     type: "website",
     locale: "en_IN",
+    url: SITE_URL,
+    siteName: profile.name,
+    title: `${profile.name} — ${profile.positioning}`,
+    description: profile.statement,
   },
-  twitter: { card: "summary_large_image", title: site.name, description: site.tagline },
+  twitter: {
+    card: "summary_large_image",
+    title: `${profile.name} — ${profile.positioning}`,
+    description: profile.statement,
+  },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#efe7d9" },
-    { media: "(prefers-color-scheme: dark)", color: "#150d11" },
+    { media: "(prefers-color-scheme: light)", color: "#f4f2ee" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f0d0c" },
   ],
 };
 
-const noFlash = `(function(){try{
-var h=document.documentElement;
-var t=localStorage.getItem('nb-theme');
-var d=(t==='dark'||t==='light')?t:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
-h.setAttribute('data-theme',d);
-var seen=sessionStorage.getItem('nb-intro')==='1';
-var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-h.classList.add((seen||rm)?'intro-done':'intro-lock');
-}catch(e){document.documentElement.classList.add('intro-done');}})();`;
+const noFlash = `(function(){try{var t=localStorage.getItem('nb-theme');var d=(t==='dark'||t==='light')?t:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',d);}catch(e){}})();`;
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -57,13 +70,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
         <script dangerouslySetInnerHTML={{ __html: noFlash }} />
-        <noscript>
-          <style>{`.reveal{opacity:1 !important;transform:none !important}.intro{display:none !important}`}</style>
-        </noscript>
       </head>
       <body>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[10001] focus:bg-ink focus:px-3 focus:py-2 focus:text-paper"
+        >
+          Skip to content
+        </a>
+        <SmoothScroll />
         <Intro />
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

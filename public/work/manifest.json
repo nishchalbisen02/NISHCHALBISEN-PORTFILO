@@ -1,4 +1,140 @@
 {
+  "work/kopal-cover.webp": {
+    "w": 1600,
+    "h": 1067
+  },
+  "kopal-cover": {
+    "w": 1600,
+    "h": 1067
+  },
+  "work/kopal-01.webp": {
+    "w": 1500,
+    "h": 1000
+  },
+  "kopal-01": {
+    "w": 1500,
+    "h": 1000
+  },
+  "work/kopal-02.webp": {
+    "w": 1500,
+    "h": 1000
+  },
+  "kopal-02": {
+    "w": 1500,
+    "h": 1000
+  },
+  "work/kopal-03.webp": {
+    "w": 1500,
+    "h": 1000
+  },
+  "kopal-03": {
+    "w": 1500,
+    "h": 1000
+  },
+  "work/kopal-04.webp": {
+    "w": 1200,
+    "h": 1245
+  },
+  "kopal-04": {
+    "w": 1200,
+    "h": 1245
+  },
+  "work/smilediary-cover.webp": {
+    "w": 1254,
+    "h": 1254
+  },
+  "smilediary-cover": {
+    "w": 1254,
+    "h": 1254
+  },
+  "work/smilediary-01.webp": {
+    "w": 1400,
+    "h": 933
+  },
+  "smilediary-01": {
+    "w": 1400,
+    "h": 933
+  },
+  "work/smilediary-02.webp": {
+    "w": 1400,
+    "h": 839
+  },
+  "smilediary-02": {
+    "w": 1400,
+    "h": 839
+  },
+  "work/radiora-cover.webp": {
+    "w": 896,
+    "h": 1200
+  },
+  "radiora-cover": {
+    "w": 896,
+    "h": 1200
+  },
+  "work/radiora-01.webp": {
+    "w": 896,
+    "h": 1200
+  },
+  "radiora-01": {
+    "w": 896,
+    "h": 1200
+  },
+  "work/radiora-02.webp": {
+    "w": 896,
+    "h": 1200
+  },
+  "radiora-02": {
+    "w": 896,
+    "h": 1200
+  },
+  "work/radiora-03.webp": {
+    "w": 896,
+    "h": 1200
+  },
+  "radiora-03": {
+    "w": 896,
+    "h": 1200
+  },
+  "work/flowai-cover.webp": {
+    "w": 1200,
+    "h": 630
+  },
+  "flowai-cover": {
+    "w": 1200,
+    "h": 630
+  },
+  "work/flowai-01.webp": {
+    "w": 514,
+    "h": 900
+  },
+  "flowai-01": {
+    "w": 514,
+    "h": 900
+  },
+  "work/flowai-02.webp": {
+    "w": 510,
+    "h": 900
+  },
+  "flowai-02": {
+    "w": 510,
+    "h": 900
+  },
+  "work/flowai-03.webp": {
+    "w": 510,
+    "h": 900
+  },
+  "flowai-03": {
+    "w": 510,
+    "h": 900
+  },
+  "work/flowai-04.webp": {
+    "w": 506,
+    "h": 900
+  },
+  "flowai-04": {
+    "w": 506,
+    "h": 900
+  },
   "work/bhopal.webp": {
     "w": 1500,
     "h": 2251
@@ -240,11 +376,11 @@
     "h": 2678
   },
   "about-portrait.webp": {
-    "w": 1200,
-    "h": 1500
+    "w": 1100,
+    "h": 1100
   },
   "about-portrait": {
-    "w": 1200,
-    "h": 1500
+    "w": 1100,
+    "h": 1100
   }
 }
