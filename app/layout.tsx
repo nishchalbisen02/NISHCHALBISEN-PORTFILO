@@ -53,7 +53,7 @@ export const viewport: Viewport = {
   ],
 };
 
-const noFlash = `(function(){try{var t=localStorage.getItem('nb-theme');var d=(t==='dark'||t==='light')?t:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',d);}catch(e){}})();`;
+const noFlash = `(function(){try{var h=document.documentElement;var t=localStorage.getItem('nb-theme');var d=(t==='dark'||t==='light')?t:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');h.setAttribute('data-theme',d);var p=localStorage.getItem('nb-palette');if(['hagi','willow','incense','mulberry','sunflower'].indexOf(p)>-1)h.setAttribute('data-palette',p);}catch(e){}})();`;
 
 export default function RootLayout({
   children,

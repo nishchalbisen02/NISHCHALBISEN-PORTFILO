@@ -4,48 +4,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { nav } from "@/data/nav";
 import { profile } from "@/data/profile";
+import PaletteMenu from "@/components/layout/PaletteMenu";
 import { cn } from "@/lib/cn";
-
-function ThemeToggle({ className }: { className?: string }) {
-  const [theme, setTheme] = useState<"light" | "dark" | null>(null);
-
-  useEffect(() => {
-    let t: "light" | "dark" | null = null;
-    try {
-      t = localStorage.getItem("nb-theme") as "light" | "dark" | null;
-    } catch {}
-    setTheme(
-      t ??
-        (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-    );
-  }, []);
-
-  function toggle() {
-    const next = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    document.documentElement.setAttribute("data-theme", next);
-    try {
-      localStorage.setItem("nb-theme", next);
-    } catch {}
-  }
-
-  return (
-    <button
-      onClick={toggle}
-      aria-label="Toggle colour theme"
-      suppressHydrationWarning
-      className={cn(
-        "grid h-9 w-9 place-items-center rounded-full border border-line-strong transition-colors hover:bg-ink hover:text-paper",
-        className
-      )}
-    >
-      {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
-    </button>
-  );
-}
 
 export default function Nav() {
   const pathname = usePathname();
@@ -108,11 +71,11 @@ export default function Nav() {
               {n.label}
             </Link>
           ))}
-          <ThemeToggle />
+          <PaletteMenu />
         </nav>
 
         <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggle />
+          <PaletteMenu />
           <button
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Close menu" : "Open menu"}

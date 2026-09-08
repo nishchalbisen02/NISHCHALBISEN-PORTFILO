@@ -9,7 +9,7 @@ const LINES = ["Technology.", "AI.", "Design.", "Visual Storytelling."];
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <Hero3D className="pointer-events-none absolute -right-[12%] top-0 h-full w-[70%] opacity-90 [mask-image:radial-gradient(58%_58%_at_62%_42%,#000,transparent)] md:opacity-100" />
+      <Hero3D className="pointer-events-none absolute right-[-8%] top-[-6%] h-[88%] w-[50%] opacity-55 [mask-image:radial-gradient(44%_44%_at_60%_46%,#000,transparent_78%)]" />
 
       <div className="container relative pb-16 pt-14 sm:pb-24 sm:pt-20 lg:pt-24">
         <div className="hero-fade flex flex-wrap gap-x-6 gap-y-1 meta" style={{ ["--d" as string]: "0.05s" } as React.CSSProperties}>

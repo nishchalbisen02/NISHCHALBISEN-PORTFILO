@@ -5,24 +5,25 @@
 /* =========================================================
    Nishchal Bisen — Creative Technologist portfolio
    Technology × AI × Design × Visual Storytelling
-   Editorial-technical · palette from Japanese seasonal
-   colours: mulberry-cream paper, 葡萄 grape-wine accent,
-   二藍 muted-indigo secondary.
+
+   Five palettes drawn from Japanese seasonal colour cards,
+   switchable from the nav. Each sets 6 core tokens (light +
+   dark); everything else derives from them.
+     hagi      — autumn · grape-wine / rose      (default)
+     willow    — spring · moss / celadon green
+     incense   — spring · burnt amber / canola
+     mulberry  — summer · iris violet
+     sunflower — summer · deep indigo / sky
    ========================================================= */
 
 :root {
   --font-grotesk: "Geist";
   --font-mono: "Geist Mono";
 
-  --paper: #f3efe6;
-  --paper-2: #e8e1d3;
-  --ink: #17120f;
-  --ink-2: #6a635b;
-  --line: rgba(23, 18, 15, 0.14);
-  --line-strong: rgba(23, 18, 15, 0.4);
-  --accent: #7a2740;
-  --accent-ink: #f7f2e8;
-  --accent-2: #5b5b7e;
+  /* derived — one formula, every palette */
+  --line: color-mix(in srgb, var(--ink) 14%, transparent);
+  --line-strong: color-mix(in srgb, var(--ink) 40%, transparent);
+  --accent-ink: var(--paper);
 
   --grain: 0.03;
   --grain-blend: multiply;
@@ -30,38 +31,149 @@
   --texture-blend: multiply;
 }
 
+/* dark adjustments to grain/texture — palette-agnostic */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #100c11;
-    --paper-2: #1b141c;
-    --ink: #f2ede4;
-    --ink-2: #968f93;
-    --line: rgba(242, 237, 228, 0.14);
-    --line-strong: rgba(242, 237, 228, 0.4);
-    --accent: #c65576;
-    --accent-ink: #100c11;
-    --accent-2: #8a8ab0;
     --grain: 0.06;
     --grain-blend: overlay;
     --texture: 0.32;
     --texture-blend: screen;
   }
 }
-
 :root[data-theme="dark"] {
-  --paper: #100c11;
-  --paper-2: #1b141c;
-  --ink: #f2ede4;
-  --ink-2: #968f93;
-  --line: rgba(242, 237, 228, 0.14);
-  --line-strong: rgba(242, 237, 228, 0.4);
-  --accent: #c65576;
-  --accent-ink: #100c11;
-  --accent-2: #8a8ab0;
   --grain: 0.06;
   --grain-blend: overlay;
   --texture: 0.32;
   --texture-blend: screen;
+}
+
+/* ---------- palette core tokens (light) ---------- */
+:root,
+:root[data-palette="hagi"] {
+  --paper: #f3efe6;
+  --paper-2: #e8e1d3;
+  --ink: #17120f;
+  --ink-2: #6a635b;
+  --accent: #7a2740;
+  --accent-2: #5b5b7e;
+}
+:root[data-palette="willow"] {
+  --paper: #f1f0e3;
+  --paper-2: #e3e6d1;
+  --ink: #141810;
+  --ink-2: #5e665a;
+  --accent: #3d6b4c;
+  --accent-2: #7f8d5c;
+}
+:root[data-palette="incense"] {
+  --paper: #f7efe3;
+  --paper-2: #f0e1c9;
+  --ink: #1a130c;
+  --ink-2: #6f6353;
+  --accent: #9c5a24;
+  --accent-2: #c08a2c;
+}
+:root[data-palette="mulberry"] {
+  --paper: #f4efe5;
+  --paper-2: #eadfd0;
+  --ink: #17111a;
+  --ink-2: #6a6068;
+  --accent: #5a3a7c;
+  --accent-2: #8f5a8a;
+}
+:root[data-palette="sunflower"] {
+  --paper: #f6f1e4;
+  --paper-2: #ebe6d3;
+  --ink: #12130f;
+  --ink-2: #5e6560;
+  --accent: #2c3b66;
+  --accent-2: #b98f2c;
+}
+
+/* ---------- palette core tokens (dark) ---------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]),
+  :root[data-palette="hagi"]:not([data-theme="light"]) {
+    --paper: #100c11;
+    --paper-2: #1b141c;
+    --ink: #f2ede4;
+    --ink-2: #968f93;
+    --accent: #c65576;
+    --accent-2: #8a8ab0;
+  }
+  :root[data-palette="willow"]:not([data-theme="light"]) {
+    --paper: #0d0f0b;
+    --paper-2: #171a13;
+    --ink: #eef0e2;
+    --ink-2: #8f978a;
+    --accent: #6fae7f;
+    --accent-2: #9aa878;
+  }
+  :root[data-palette="incense"]:not([data-theme="light"]) {
+    --paper: #110d09;
+    --paper-2: #1c150e;
+    --ink: #f4ece0;
+    --ink-2: #97897a;
+    --accent: #e08a44;
+    --accent-2: #d9a94a;
+  }
+  :root[data-palette="mulberry"]:not([data-theme="light"]) {
+    --paper: #100c12;
+    --paper-2: #1a141d;
+    --ink: #f1ece6;
+    --ink-2: #948d95;
+    --accent: #a479c8;
+    --accent-2: #c07fb4;
+  }
+  :root[data-palette="sunflower"]:not([data-theme="light"]) {
+    --paper: #0c0d10;
+    --paper-2: #14161c;
+    --ink: #eef0e6;
+    --ink-2: #8f948e;
+    --accent: #6f8ec9;
+    --accent-2: #d8b657;
+  }
+}
+:root[data-theme="dark"],
+:root[data-theme="dark"][data-palette="hagi"] {
+  --paper: #100c11;
+  --paper-2: #1b141c;
+  --ink: #f2ede4;
+  --ink-2: #968f93;
+  --accent: #c65576;
+  --accent-2: #8a8ab0;
+}
+:root[data-theme="dark"][data-palette="willow"] {
+  --paper: #0d0f0b;
+  --paper-2: #171a13;
+  --ink: #eef0e2;
+  --ink-2: #8f978a;
+  --accent: #6fae7f;
+  --accent-2: #9aa878;
+}
+:root[data-theme="dark"][data-palette="incense"] {
+  --paper: #110d09;
+  --paper-2: #1c150e;
+  --ink: #f4ece0;
+  --ink-2: #97897a;
+  --accent: #e08a44;
+  --accent-2: #d9a94a;
+}
+:root[data-theme="dark"][data-palette="mulberry"] {
+  --paper: #100c12;
+  --paper-2: #1a141d;
+  --ink: #f1ece6;
+  --ink-2: #948d95;
+  --accent: #a479c8;
+  --accent-2: #c07fb4;
+}
+:root[data-theme="dark"][data-palette="sunflower"] {
+  --paper: #0c0d10;
+  --paper-2: #14161c;
+  --ink: #eef0e6;
+  --ink-2: #8f948e;
+  --accent: #6f8ec9;
+  --accent-2: #d8b657;
 }
 
 @layer base {
