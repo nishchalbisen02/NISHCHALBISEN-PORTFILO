@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import PageTexture from "@/components/layout/PageTexture";
 import { profile } from "@/data/profile";
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="container flex min-h-[70vh] flex-col justify-center py-16 sm:py-24">
+      <PageTexture name="indigo" position="center" />
       <span className="meta">Contact</span>
       <h1 className="mt-4 text-display-1 font-bold uppercase leading-[0.86] tracking-tightest">
         Let&rsquo;s make

@@ -3,8 +3,16 @@ import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArrowLink, SectionHeading } from "@/components/ui/primitives";
 import { ProjectCard } from "@/components/work/ProjectCard";
+import PageTexture, { type TextureName } from "@/components/layout/PageTexture";
 import { disciplines, disciplineById, type DisciplineId } from "@/data/disciplines";
 import { projectsByDiscipline, photography } from "@/data/projects";
+
+const TEXTURE: Record<DisciplineId, TextureName> = {
+  tech: "lines",
+  ai: "indigo",
+  design: "marble",
+  film: "curves",
+};
 
 export default function DisciplinePage({ id }: { id: DisciplineId }) {
   const d = disciplineById[id];
@@ -14,6 +22,7 @@ export default function DisciplinePage({ id }: { id: DisciplineId }) {
 
   return (
     <>
+      <PageTexture name={TEXTURE[id]} position="right" />
       {/* hero */}
       <section className="container pb-14 pt-10 sm:pb-20 sm:pt-16">
         <span className="meta">

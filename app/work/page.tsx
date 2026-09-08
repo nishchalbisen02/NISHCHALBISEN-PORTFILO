@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { WorkIndex } from "@/components/work/WorkIndex";
+import PageTexture from "@/components/layout/PageTexture";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <div className="container py-10 sm:py-16">
+      <PageTexture name="curves" position="right" />
       <span className="meta">Index</span>
       <h1 className="mt-3 text-display-1 font-bold uppercase leading-[0.88] tracking-tightest">
         Work

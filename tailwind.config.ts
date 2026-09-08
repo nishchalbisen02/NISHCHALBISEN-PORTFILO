@@ -28,6 +28,7 @@ const config: Config = {
         "line-strong": "var(--line-strong)",
         accent: "var(--accent)",
         "accent-ink": "var(--accent-ink)",
+        "accent-2": "var(--accent-2)",
       },
       fontFamily: {
         sans: ["var(--font-grotesk)", "Space Grotesk", "system-ui", "sans-serif"],

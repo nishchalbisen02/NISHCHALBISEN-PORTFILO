@@ -5,52 +5,63 @@
 /* =========================================================
    Nishchal Bisen — Creative Technologist portfolio
    Technology × AI × Design × Visual Storytelling
-   Editorial-technical · neutral base + one oxblood accent
+   Editorial-technical · palette from Japanese seasonal
+   colours: mulberry-cream paper, 葡萄 grape-wine accent,
+   二藍 muted-indigo secondary.
    ========================================================= */
 
 :root {
   --font-grotesk: "Space Grotesk";
   --font-mono: "Space Mono";
 
-  --paper: #f4f2ee;
-  --paper-2: #eae6de;
-  --ink: #16110f;
-  --ink-2: #6b6560;
-  --line: rgba(22, 17, 15, 0.14);
-  --line-strong: rgba(22, 17, 15, 0.4);
-  --accent: #8a2233;
-  --accent-ink: #f7f4ee;
+  --paper: #f3efe6;
+  --paper-2: #e8e1d3;
+  --ink: #17120f;
+  --ink-2: #6a635b;
+  --line: rgba(23, 18, 15, 0.14);
+  --line-strong: rgba(23, 18, 15, 0.4);
+  --accent: #7a2740;
+  --accent-ink: #f7f2e8;
+  --accent-2: #5b5b7e;
 
   --grain: 0.03;
   --grain-blend: multiply;
+  --texture: 0.42;
+  --texture-blend: multiply;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #0f0d0c;
-    --paper-2: #171412;
-    --ink: #f2efe9;
-    --ink-2: #98918a;
-    --line: rgba(242, 239, 233, 0.14);
-    --line-strong: rgba(242, 239, 233, 0.4);
-    --accent: #d1495f;
-    --accent-ink: #0f0d0c;
-    --grain: 0.05;
+    --paper: #100c11;
+    --paper-2: #1b141c;
+    --ink: #f2ede4;
+    --ink-2: #968f93;
+    --line: rgba(242, 237, 228, 0.14);
+    --line-strong: rgba(242, 237, 228, 0.4);
+    --accent: #c65576;
+    --accent-ink: #100c11;
+    --accent-2: #8a8ab0;
+    --grain: 0.06;
     --grain-blend: overlay;
+    --texture: 0.32;
+    --texture-blend: screen;
   }
 }
 
 :root[data-theme="dark"] {
-  --paper: #0f0d0c;
-  --paper-2: #171412;
-  --ink: #f2efe9;
-  --ink-2: #98918a;
-  --line: rgba(242, 239, 233, 0.14);
-  --line-strong: rgba(242, 239, 233, 0.4);
-  --accent: #d1495f;
-  --accent-ink: #0f0d0c;
-  --grain: 0.05;
+  --paper: #100c11;
+  --paper-2: #1b141c;
+  --ink: #f2ede4;
+  --ink-2: #968f93;
+  --line: rgba(242, 237, 228, 0.14);
+  --line-strong: rgba(242, 237, 228, 0.4);
+  --accent: #c65576;
+  --accent-ink: #100c11;
+  --accent-2: #8a8ab0;
+  --grain: 0.06;
   --grain-blend: overlay;
+  --texture: 0.32;
+  --texture-blend: screen;
 }
 
 @layer base {

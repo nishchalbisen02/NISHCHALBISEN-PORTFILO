@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading, ArrowLink } from "@/components/ui/primitives";
 import { profile } from "@/data/profile";
+import PageTexture from "@/components/layout/PageTexture";
 
 export const metadata: Metadata = {
   title: "About",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="pb-24">
+      <PageTexture name="curves" position="left" />
       {/* intro */}
       <section className="container pb-14 pt-10 sm:pb-20 sm:pt-16">
         <span className="meta">About</span>
@@ -70,7 +72,7 @@ export default function AboutPage() {
               </div>
               <div className="md:col-span-8">
                 <p className="text-sm font-medium">
-                  {e.role}
+                  {(e.roles ?? [e.role]).join("  ·  ")}
                   {e.current && (
                     <span className="ml-2 inline-flex items-center gap-1 align-middle meta">
                       <span className="h-1.5 w-1.5 rounded-full bg-accent" />

@@ -6,10 +6,12 @@ import ExperienceBlock from "@/components/home/ExperienceBlock";
 import ApproachBlock from "@/components/home/ApproachBlock";
 import ContactCta from "@/components/home/ContactCta";
 import { Marquee } from "@/components/ui/Marquee";
+import PageTexture from "@/components/layout/PageTexture";
 
 export default function HomePage() {
   return (
     <>
+      <PageTexture name="lines" position="right" />
       <Hero />
       <IntroBlock />
       <Marquee

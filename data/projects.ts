@@ -24,8 +24,6 @@ export type Project = {
   /** has a /work/[slug] case study page */
   caseStudy: boolean;
   status: ProjectStatus;
-  /** completed as part of the IBT professional experience */
-  experience?: "ibt";
   /** card layout hint */
   layout?: "full" | "wide" | "tall" | "standard";
 
@@ -51,7 +49,7 @@ export type Project = {
 
 export const projects: Project[] = [
   // ==========================================================
-  // IBT — PROFESSIONAL EXPERIENCE
+  // FREELANCE — client work
   // ==========================================================
   {
     title: "Kopal International School",
@@ -60,14 +58,13 @@ export const projects: Project[] = [
     disciplines: ["tech", "design"],
     categories: ["Web Design", "Development", "Education"],
     client: "Kopal International School",
-    year: "2026", // TODO: confirm
+    year: "2025", // TODO: confirm
     role: ["Web Design", "Frontend", "Build"],
     description:
       "Complete website — design and build — for an international school in Bhopal.",
     featured: true,
     caseStudy: true,
-    status: "professional",
-    experience: "ibt",
+    status: "freelance",
     layout: "full",
     cover: "/work/kopal-cover.webp",
     images: [
@@ -79,7 +76,7 @@ export const projects: Project[] = [
     services: ["Web Design", "Frontend Development", "Responsive Build"],
     tools: ["Next.js", "React", "CSS", "Figma"], // TODO: confirm stack
     overview:
-      "A full website project delivered at IBT for Kopal International School — information architecture, visual design and a responsive front-end build.",
+      "A full website project for Kopal International School — information architecture, visual design and a responsive front-end build.",
   },
   {
     title: "The Smile Diary",
@@ -88,14 +85,13 @@ export const projects: Project[] = [
     disciplines: ["tech", "design"],
     categories: ["Web Design", "Development", "Healthcare"],
     client: "The Smile Diary",
-    year: "2026", // TODO: confirm
+    year: "2025", // TODO: confirm
     role: ["Web Design", "Frontend"],
     description:
       "Website for a dental clinic — calm, trustworthy, and built to convert enquiries.",
     featured: true,
     caseStudy: true,
-    status: "professional",
-    experience: "ibt",
+    status: "freelance",
     layout: "wide",
     cover: "/work/smilediary-cover.webp",
     images: ["/work/smilediary-01.webp", "/work/smilediary-02.webp"],
@@ -109,14 +105,13 @@ export const projects: Project[] = [
     disciplines: ["design", "tech"],
     categories: ["Branding", "Digital Creative", "E-commerce"],
     client: "Radiora",
-    year: "2026", // TODO: confirm
+    year: "2025", // TODO: confirm
     role: ["Brand", "Digital Design", "Art Direction"],
     description:
       "Visual and digital work for a skincare brand — editorial, product-led, made for commerce.",
     featured: true,
     caseStudy: true,
-    status: "professional",
-    experience: "ibt",
+    status: "freelance",
     layout: "wide",
     cover: "/work/radiora-cover.webp",
     images: [
@@ -133,14 +128,13 @@ export const projects: Project[] = [
     disciplines: ["ai", "tech", "film"],
     categories: ["AI Product", "AI Video", "Creative Workflows"],
     client: "FlowAI",
-    year: "2026", // TODO: confirm
+    year: "2025", // TODO: confirm
     role: ["AI Product", "Creative Technology"],
     description:
       "An AI product for generating commercial video and creative — AI used as the medium, end to end.",
     featured: true,
     caseStudy: true,
-    status: "professional",
-    experience: "ibt",
+    status: "freelance",
     layout: "full",
     cover: "/work/flowai-cover.webp",
     images: [
@@ -153,66 +147,9 @@ export const projects: Project[] = [
     services: ["AI Product", "AI Video Workflows", "Web"],
     tools: ["AI Video", "AI Image", "Next.js"],
   },
-  {
-    title: "Club ZAZA",
-    slug: "club-zaza",
-    discipline: "design",
-    disciplines: ["design", "film"],
-    categories: ["Branding", "Campaign", "Advertising"],
-    client: "Club ZAZA",
-    year: "2026", // TODO: confirm
-    role: ["Branding", "Creative", "Art Direction"],
-    description:
-      "Branding, campaign and creative visual work for a nightlife brand.",
-    featured: true,
-    caseStudy: true,
-    status: "professional",
-    experience: "ibt",
-    layout: "tall",
-    placeholder: true,
-    services: ["Brand Identity", "Campaign", "Advertising Creative"],
-  },
-  {
-    title: "Virat Electronics",
-    slug: "virat-electronics",
-    discipline: "film",
-    disciplines: ["film", "design"],
-    categories: ["Commercial", "Video", "Advertising"],
-    client: "Virat Electronics",
-    year: "2026", // TODO: confirm
-    role: ["Direction", "Production", "Edit"],
-    description:
-      "A commercial advertising film for a consumer-electronics retailer.",
-    featured: true,
-    caseStudy: true,
-    status: "professional",
-    experience: "ibt",
-    layout: "full",
-    placeholder: true,
-    services: ["Creative Direction", "Video Production", "Post"],
-  },
-  {
-    title: "IBT — Brand & Digital",
-    slug: "ibt-brand-digital",
-    discipline: "design",
-    disciplines: ["tech", "ai", "design", "film"],
-    categories: ["Brand", "Marketing", "AI", "Web"],
-    client: "Innovative Business Technologies",
-    year: "2026", // TODO: confirm
-    role: ["Brand", "Web", "Marketing", "AI"],
-    description:
-      "Ongoing work on IBT's own website, identity, marketing creative, AI solutions, social campaigns and visual communication.",
-    featured: false,
-    caseStudy: true,
-    status: "professional",
-    experience: "ibt",
-    layout: "wide",
-    placeholder: true,
-    services: ["Brand", "Web", "Marketing", "AI Solutions", "Social"],
-  },
 
   // ==========================================================
-  // FREELANCE
+  // FREELANCE — identity & product
   // ==========================================================
   {
     title: "Sukhmani Constructions",
@@ -225,7 +162,7 @@ export const projects: Project[] = [
     role: ["Identity", "Website"],
     description:
       "Identity and website for a Bhopal construction firm — a house-and-'S' mark and a plain-spoken promise.",
-    featured: false,
+    featured: true,
     caseStudy: true,
     status: "freelance",
     layout: "standard",
@@ -321,7 +258,7 @@ export const projects: Project[] = [
     role: ["Art Direction", "Poster System", "Typography"],
     description:
       "A flexible poster and key-art system for an all-India dance-webseries audition tour.",
-    featured: false,
+    featured: true,
     caseStudy: true,
     status: "self-initiated",
     layout: "full",
@@ -466,7 +403,7 @@ export const projects: Project[] = [
 
 export const featuredProjects = projects.filter((p) => p.featured);
 
-export const ibtProjects = projects.filter((p) => p.experience === "ibt");
+export const freelanceProjects = projects.filter((p) => p.status === "freelance");
 
 export function projectsByDiscipline(id: DisciplineId): Project[] {
   return projects.filter(

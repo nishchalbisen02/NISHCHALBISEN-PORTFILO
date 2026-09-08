@@ -8,6 +8,8 @@ export type SocialLink = { label: string; value: string; href: string };
 export type ExperienceItem = {
   company: string;
   role: string;
+  /** additional roles held at the same company */
+  roles?: string[];
   period: string;
   current: boolean;
   summary: string;
@@ -47,12 +49,13 @@ export const profile = {
   experience: [
     {
       company: "Innovative Business Technologies (IBT)",
-      role: "Technology, AI, Design & Digital Production",
+      role: "Frontend & Creative UI/UX Designer",
+      roles: ["Frontend & Creative UI/UX Designer", "Graphics & Video Editor"],
       period: "2026 — Present", // TODO: confirm start date
       current: true,
       location: "Bhopal, India",
       summary:
-        "Working across technology, AI, design, branding and digital production — building websites and interfaces, brand and marketing creative, AI solutions and commercial video, and IBT's own digital presence.",
+        "In-house across two roles — building product and creative interfaces as a frontend & UI/UX designer, and producing graphics and video as an editor.",
     },
     {
       company: "Freelance",
