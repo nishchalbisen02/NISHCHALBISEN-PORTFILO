@@ -31,19 +31,19 @@ const config: Config = {
         "accent-2": "var(--accent-2)",
       },
       fontFamily: {
-        sans: ["var(--font-grotesk)", "Space Grotesk", "system-ui", "sans-serif"],
-        mono: ["var(--font-mono)", "Space Mono", "ui-monospace", "monospace"],
+        sans: ["var(--font-grotesk)", "Geist", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "Geist Mono", "ui-monospace", "monospace"],
       },
       fontSize: {
-        "display-1": ["clamp(2.4rem, -0.4rem + 11.5vw, 10.5rem)", { lineHeight: "0.92", letterSpacing: "-0.04em" }],
-        "display-2": ["clamp(2.1rem, 0.6rem + 6.5vw, 6.5rem)", { lineHeight: "0.94", letterSpacing: "-0.035em" }],
-        "display-3": ["clamp(1.8rem, 1rem + 3.6vw, 3.6rem)", { lineHeight: "1", letterSpacing: "-0.025em" }],
-        "heading": ["clamp(1.35rem, 1rem + 1.6vw, 2.1rem)", { lineHeight: "1.08", letterSpacing: "-0.02em" }],
+        "display-1": ["clamp(2.4rem, -0.4rem + 11.5vw, 10.5rem)", { lineHeight: "0.94", letterSpacing: "-0.03em" }],
+        "display-2": ["clamp(2.1rem, 0.6rem + 6.5vw, 6.5rem)", { lineHeight: "0.96", letterSpacing: "-0.028em" }],
+        "display-3": ["clamp(1.8rem, 1rem + 3.6vw, 3.6rem)", { lineHeight: "1.02", letterSpacing: "-0.022em" }],
+        "heading": ["clamp(1.35rem, 1rem + 1.6vw, 2.1rem)", { lineHeight: "1.1", letterSpacing: "-0.016em" }],
         "meta": ["0.72rem", { lineHeight: "1.4", letterSpacing: "0.14em" }],
         "meta-lg": ["0.82rem", { lineHeight: "1.4", letterSpacing: "0.1em" }],
       },
       letterSpacing: {
-        tightest: "-0.045em",
+        tightest: "-0.03em",
       },
       maxWidth: {
         prose: "62ch",
